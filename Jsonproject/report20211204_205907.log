@@ -1,0 +1,9 @@
+Use case writer:zpou
+Perform steps 1create client
+2021-12-04 20:59:07 [info] requests url: http://127.0.0.1:80/api/mgr/signin
+2021-12-04 20:59:07 [info] requests parameter: ('', {}, {'username': 'byhy', 'password': '88888888'})
+==============last============
+Perform steps 2first login
+2021-12-04 20:59:08 [info] requests url: http://127.0.0.1:80/api/mgr/signin
+2021-12-04 20:59:08 [info] requests parameter: ('', {}, {'username': 'byhy', 'password': '88888888'})
+==============last============

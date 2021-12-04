@@ -1,0 +1,19 @@
+aaaaaUse case writer:zpou
+Perform steps 1create client
+2021-12-04 15:19:09 [info] requests url:{url}
+2021-12-04 15:19:09 [info] requests parameter:{parm}
+2021-12-04 15:19:09 [info] Return information:{respones}
+2021-12-04 15:19:09 [info] Login feiled
+2021-12-04 15:19:09 [info] requests url:{url}
+2021-12-04 15:19:09 [info] requests parameter:{parm}
+2021-12-04 15:19:09 [info] Return information:{respones}
+2021-12-04 15:19:09 [info] requests url:{url}
+2021-12-04 15:19:09 [info] requests parameter:{parm}
+2021-12-04 15:19:09 [info] Return information:{respones}
+==============½áÊø============
+Perform steps 2first login
+2021-12-04 15:19:21 [info] requests url:{url}
+2021-12-04 15:19:21 [info] requests parameter:{parm}
+2021-12-04 15:19:21 [info] Return information:{respones}
+Perform steps 3last
+==============½áÊø============

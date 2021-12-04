@@ -1,6 +1,6 @@
 import requests,toml,os,time
 from confdb.Tim_Api import *
-from commen.Tcose import TestCase
+from commen.Tcose import TextCase
 
 class Request():
     """
@@ -8,7 +8,7 @@ class Request():
     """
 
     def __init__(self):
-        self.route=TestCase()
+        self.route=TextCase()
         rout=self.route.Route(os.path.abspath(os.curdir))
         file = rout + "\\conf\\url_conf.toml"
         self.toml = toml.load(file)
@@ -62,7 +62,7 @@ class Request():
         try:
             Tim_api = eval(api)
         except SyntaxError:
-            print(f"{self.time} [Error] api invalid syntax")
+            self.route.Printlog(self.time+" [Error] api invalid syntax")
         return Tim_api
 
     def ApiLeft(self,api,dict_request={},dict_rester={}):
@@ -77,20 +77,20 @@ class Request():
             log=self.Flogin(dict_rester)
             #判断登录态是否成功
             if log["ret"]==0:
-                print(f"{self.time} [info] Login succeeded")
+                self.route.Printlog(self.time+" [info] Login feiled")
             elif log["ret"]==1:
-                print(f"{self.time} [info] Login succeeded")
+                self.route.Printlog(self.time+" [info] Login succeeded")
             else:
-                raise print(f"{self.time} [info] Login failed")
+                raise self.route.Printlog(self.time+" [info] Login failed")
             url = Tim_api["api_type"] + "://" + self.toml["url"] + ":" + self.toml["port"] + Tim_api["url"]
-            print(f'{self.time} [info] requests url:{url}')
+            self.route.Printlog(self.time+" [info] requests url: "+url)
             parm = self.Parm(Tim_api["Content-Type"], dict_request)
-            print(f'{self.time} [info] requests parameter:{parm}')
+            self.route.Printlog(self.time+" [info] requests parameter: "+str(parm))
         elif Tim_api["url"] == self.signout or Tim_api["url"] == self.login:
             url = Tim_api["api_type"] + "://" + self.toml["url"] + ":" + self.toml["port"] + Tim_api["url"]
-            print(f'{self.time} [info] requests url:{url}')
+            self.route.Printlog(self.time+' [info] requests url: '+url)
             parm = self.Parm(Tim_api["Content-Type"], dict_request)
-            print(f'{self.time} [info] requests parameter:{parm}')
+            self.route.Printlog(self.time+' [info] requests parameter: '+str(parm))
 
         return parm[0],parm[1],parm[2],url
 
@@ -100,9 +100,8 @@ class Request():
         打印状态码
         :return:
         """
-        print(f"{self.time} [info] status code:{respones}")
         respones = respones.json()
-        print(f'{self.time} [info] Return information:{respones}')
+        self.route.Printlog(self.time+" [info] Return information: "+str(respones))
         return respones
 
 

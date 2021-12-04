@@ -1,0 +1,19 @@
+Use case writer:zpou
+Perform steps 1: create client
+2021-12-04 21:07:38 [info] requests url: http://127.0.0.1:80/api/mgr/signin
+2021-12-04 21:07:38 [info] requests parameter: ('', {}, {'username': 'byhy', 'password': '88888888'})
+2021-12-04 21:07:38 [info] Return information: {'ret': 0}
+2021-12-04 21:07:38 [info] Login feiled
+2021-12-04 21:07:38 [info] requests url: http://127.0.0.1:80/api/mgr/customers
+2021-12-04 21:07:38 [info] requests parameter: ('', {'action': 'add_customer', 'data': {'name': 'fsad', 'phonenumber': '1254654666', 'address': '635356'}}, {})
+2021-12-04 21:07:38 [info] Return information: {'ret': 0, 'id': 79}
+2021-12-04 21:07:38 [info] requests url: http://127.0.0.1:80/api/mgr/signout
+2021-12-04 21:07:38 [info] requests parameter: ('', {'username': 'byhy', 'password': '88888888'}, {})
+2021-12-04 21:07:38 [info] Return information: {'ret': 0}
+==============last============
+Perform steps 2: first login
+2021-12-04 21:07:40 [info] requests url: http://127.0.0.1:80/api/mgr/signin
+2021-12-04 21:07:40 [info] requests parameter: ('', {}, {'username': 'byhy', 'password': '88888888'})
+2021-12-04 21:07:40 [info] Return information: {'ret': 0}
+Perform steps 3: last
+==============last============

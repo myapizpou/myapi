@@ -1,0 +1,14 @@
+Use case writer:zpou
+Perform steps 1: first
+2021-12-04 21:11:56 [info] requests url: http://127.0.0.1:80/api/mgr/signin
+2021-12-04 21:11:56 [info] requests parameter: ('', {}, {'username': 'byhy', 'password': '88888888'})
+2021-12-04 21:11:56 [info] Return information: {'ret': 0}
+2021-12-04 21:11:56 [info] Login feiled
+2021-12-04 21:11:56 [info] requests url: http://127.0.0.1:80/api/mgr/customers
+2021-12-04 21:11:56 [info] requests parameter: ('keywords=&action=list_customer&pagenum=1&pagesize=5&_=1636857714680&', {}, {})
+2021-12-04 21:11:56 [info] Return information: {'ret': 0, 'retlist': [{'id': 80, 'name': 'fsad', 'phonenumber': '1254654666', 'address': '635356'}, {'id': 79, 'name': 'fsad', 'phonenumber': '1254654666', 'address': '635356'}, {'id': 78, 'name': 'fsad', 'phonenumber': '1254654666', 'address': '635356'}, {'id': 77, 'name': 'fsad', 'phonenumber': '1254654666', 'address': '635356'}, {'id': 76, 'name': 'fsad', 'phonenumber': '1254654666', 'address': '635356'}], 'total': 54}
+2021-12-04 21:11:56 [info] requests url: http://127.0.0.1:80/api/mgr/signout
+2021-12-04 21:11:56 [info] requests parameter: ('', {'username': 'byhy', 'password': '88888888'}, {})
+2021-12-04 21:11:56 [info] Return information: {'ret': 0}
+Perform steps 2: last
+==============last============

@@ -1,18 +1,13 @@
-import unittest,os,time,json
+import unittest,os,time,sys
 
-class TestCase(unittest.TestCase):
+class TextCase(unittest.TestCase):
     Time = time.strftime("%Y%m%d_%H%M%S", time.localtime())
-    touch=""
-    def setUp(self):
-        self.step=1 #记步骤
 
-    def CreateJson(self):
-        """
-        创建json日志文件
-        :return:
-        """
-        self.f = open(self.touch, 'w')
-        return self.f
+    @classmethod
+    def setUpClass(self):
+        globals()["touch"]=None
+        globals()["step"]=1
+        globals()["a"] = 1
 
     def Route(self,rou):
         """
@@ -30,19 +25,18 @@ class TestCase(unittest.TestCase):
             b = a - 6
         return rout
 
-    def PrintJson(self,Prin={}):
+    def Printlog(self,Prin):
         """
         打印执行日志
         :return:
         """
-        f = open(self.touch)
-        numm = json.load(f)
-        f.close()
-        numm.update(Prin)
-        numm1 = json.dumps(numm)
-        with open(self.touch, "w") as fw:
-            fw.write(numm1)
-        fw.close()
+        try:
+            print(Prin)
+            fw=open(globals()["touch"],"a")
+            fw.write(Prin+"\n")
+            fw.close()
+        except FileNotFoundError:
+            print("No such file or directory")
 
 
     def name(self,name):
@@ -51,14 +45,15 @@ class TestCase(unittest.TestCase):
         :param name:
         :return:
         """
-        rout = self.Route(os.path.abspath(os.curdir))
-        file_json =f"\\report{self.Time}.json"
-        dict_l={"case_name":name}
-        self.touch=rout + "\\Jsonproject"+ file_json
-        self.f = open(self.touch, 'w')
-        dict_json = json.dumps(dict_l)
-        self.f.write(dict_json)
-        self.f.close()
+        if globals()["a"]==1:
+            rout = self.Route(os.path.abspath(os.curdir))
+            file_json =f"\\report{self.Time}.log"
+            dict_l="Use case writer:"+name+"\n"
+            globals()["touch"]=rout + "\\Jsonproject"+ file_json
+            self.f = open(globals()["touch"], 'a')
+            self.f.write(dict_l)
+            self.f.close()
+        globals()["a"]=globals()["a"]+1
 
 
     def show(self,string):
@@ -67,9 +62,9 @@ class TestCase(unittest.TestCase):
         :param string:
         :return:
         """
-        print(f"Perform steps {self.step}：{string}")
-        self.step+=1
+        self.Printlog("Perform steps "+str(globals()['step'])+": "+string)
+        globals()["step"]+=1
 
     def tearDown(self):
-        print('==============结束============')
+        self.Printlog('==============last============')
 

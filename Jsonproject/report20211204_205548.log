@@ -1,0 +1,7 @@
+Use case writer:zpou
+Perform steps 1create client
+2021-12-04 20:55:48 [info] requests url: http://127.0.0.1:80/api/mgr/signin
+==============last============
+Perform steps 2first login
+2021-12-04 20:55:48 [info] requests url: http://127.0.0.1:80/api/mgr/signin
+==============last============

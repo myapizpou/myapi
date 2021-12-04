@@ -1,8 +1,8 @@
 from report.user import Api
-from commen.Tcose import TestCase
+from commen.Tcose import TextCase
 import unittest
 
-class Login(TestCase):
+class Login(TextCase):
     """
     地址改了，咱不能用
     """

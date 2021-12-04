@@ -1,12 +1,11 @@
 from report.user import Api
-from commen.Tcose import TestCase
+from commen.Tcose import TextCase
 import unittest
 
-class Login(TestCase):
+class Login(TextCase):
     def setUp(self):
         self.name("zpou") #执行人
         self.user=Api() #实例化
-        self.step = 1 #初始化步骤
 
     def test_run(self):
         bart_step="first login"
