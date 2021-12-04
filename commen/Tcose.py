@@ -1,4 +1,4 @@
-import unittest,os,time,sys
+import unittest,os,time
 
 class TextCase(unittest.TestCase):
     Time = time.strftime("%Y%m%d_%H%M%S", time.localtime())

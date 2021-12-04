@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="056a79a7-12c3-40b7-81ba-f8a3eae83c99" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/oss/test_weather.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/oss/test_weather.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/test_login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jsonproject/report20211204_204840.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/case_report/report_20211204_211221.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/commen/Tcose.py" beforeDir="false" afterPath="$PROJECT_DIR$/commen/Tcose.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tc_case/requetes.py" beforeDir="false" afterPath="$PROJECT_DIR$/tc_case/requetes.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
