@@ -5,19 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="056a79a7-12c3-40b7-81ba-f8a3eae83c99" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/my_api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/my_api.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jsonproject/report20211204_211221.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module introduction.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Module introduction.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/oss/test_weather.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/oss/test_weather.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/test_login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_report/report_20211204_211053.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commen/Tcose.py" beforeDir="false" afterPath="$PROJECT_DIR$/commen/Tcose.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/url_conf.toml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/url_conf.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setting.txt" beforeDir="false" afterPath="$PROJECT_DIR$/setting.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tc_case/requetes.py" beforeDir="false" afterPath="$PROJECT_DIR$/tc_case/requetes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tc_repot/run_all_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/tc_repot/run_all_test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
