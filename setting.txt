@@ -1,7 +1,7 @@
 #需要安装的库
-python3.7
-toml
-request
+python3.7以上
+pip install toml
+pip install requests
 os
 time
 json

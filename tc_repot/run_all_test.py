@@ -10,7 +10,6 @@ def all_case():
     Time=time.strftime("%Y%m%d_%H%M%S", time.localtime())
     result_path = os.path.abspath(os.path.join(os.getcwd(), ".."))#生成测试报告的目录
     html=f'\\case_report\\report_{Time}.html'
-    print(result_path+html)
     fb = open(result_path+html, "wb")#打开测试报告的html文件
     runner = HTMLTestRunner.HTMLTestRunner(
         stream=fb,

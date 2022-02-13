@@ -1,5 +1,4 @@
 import requests,toml,os,time
-from confdb.Tim_Api import *
 from commen.Tcose import TextCase
 
 class Request():
@@ -10,29 +9,10 @@ class Request():
     def __init__(self):
         self.route=TextCase()
         rout=self.route.Route(os.path.abspath(os.curdir))
-        file = rout + "\\conf\\url_conf.toml"
+        file = rout + "\\conf\\url_conf.toml"#配置文件地址
         self.toml = toml.load(file)
         self.time=time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         self.begin = requests.session()
-        self.login="/api/mgr/signin"    #登录url
-        self.signout="/api/mgr/signout" #退出登录
-        self.login_user={} #登录所用的账号
-
-    def Flogin(self,dict_rester={}):
-        """
-        执行登录，保持登录状态
-        :return:
-        """
-        self.login_user=dict_rester
-        return self.Post(Tim_api_login_byhy, self.login_user)
-
-    def ExitLogin(self):
-        """
-        退出登录，用于释放的
-        :return:
-        """
-        dict=self.login_user
-        return self.Post(Tim_api_exit_login, dict)
 
     def Parm(self,request_type,dict_request={}):
         """
@@ -72,25 +52,10 @@ class Request():
         """
         # 将接口模板数据转换为字典
         Tim_api = self.ApiCheck(api)
-        #登录，保持登录态
-        if Tim_api["url"] != self.login and Tim_api["url"] != self.signout:
-            log=self.Flogin(dict_rester)
-            #判断登录态是否成功
-            if log["ret"]==0:
-                self.route.Printlog(self.time+" [info] Login feiled")
-            elif log["ret"]==1:
-                self.route.Printlog(self.time+" [info] Login succeeded")
-            else:
-                raise self.route.Printlog(self.time+" [info] Login failed")
-            url = Tim_api["api_type"] + "://" + self.toml["url"] + ":" + self.toml["port"] + Tim_api["url"]
-            self.route.Printlog(self.time+" [info] requests url: "+url)
-            parm = self.Parm(Tim_api["Content-Type"], dict_request)
-            self.route.Printlog(self.time+" [info] requests parameter: "+str(parm))
-        elif Tim_api["url"] == self.signout or Tim_api["url"] == self.login:
-            url = Tim_api["api_type"] + "://" + self.toml["url"] + ":" + self.toml["port"] + Tim_api["url"]
-            self.route.Printlog(self.time+' [info] requests url: '+url)
-            parm = self.Parm(Tim_api["Content-Type"], dict_request)
-            self.route.Printlog(self.time+' [info] requests parameter: '+str(parm))
+        url = Tim_api["api_type"] + "://" + self.toml["url"] + ":" + self.toml["port"] + Tim_api["url"]
+        self.route.Printlog(self.time+' [info] requests url: '+url)
+        parm = self.Parm(Tim_api["Content-Type"], dict_request)
+        self.route.Printlog(self.time+' [info] requests parameter: '+str(parm))
 
         return parm[0],parm[1],parm[2],url
 
@@ -113,9 +78,6 @@ class Request():
         parm = self.ApiLeft(api,dict_request,dict_rester)
         respones = self.begin.get(url=parm[3], params=parm[0])
         respones=self.Repons(respones)
-        # 退出登录，释放
-        if parm[3][-len(self.login):] != self.login and parm[3][-len(self.signout):] != self.signout:
-            self.ExitLogin()
         return respones
 
     def Post(self,api,dict_request={},dict_rester={}):
@@ -128,9 +90,6 @@ class Request():
         parm = self.ApiLeft(api,dict_request,dict_rester)
         respones = self.begin.post(url=parm[3], data=parm[2],json=parm[1])
         respones=self.Repons(respones)
-        # 退出登录，释放
-        if parm[3][-len(self.login):] != self.login and parm[3][-len(self.signout):] !=self.signout:
-            self.ExitLogin()
         return respones
 
     def Put(self,api,dict_request={},dict_rester={}):
@@ -143,9 +102,6 @@ class Request():
         parm = self.ApiLeft(api, dict_request,dict_rester)
         respones = self.begin.put(url=parm[3], data=parm[2])
         respones = self.Repons(respones)
-        # 退出登录，释放
-        if parm[3][-len(self.login):] != self.login and parm[3][-len(self.signout):] != self.signout:
-            self.ExitLogin()
         return respones
 
     def Delete(self,api,dict_request={},dict_rester={}):
@@ -158,7 +114,4 @@ class Request():
         parm = self.ApiLeft(api, dict_request,dict_rester)
         respones = self.begin.delete(url=parm[3], params=parm[0],json=parm[1])
         respones = self.Repons(respones)
-        # 退出登录，释放
-        if parm[3][-len(self.login):] != self.login and parm[3][-len(self.signout):] != self.signout:
-            self.ExitLogin()
         return respones

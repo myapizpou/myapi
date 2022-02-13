@@ -12,6 +12,15 @@ class Login(TextCase):
         self.step = 1 #初始化步骤
 
     def test_run(self):
+        bart_step = "first login"  # 登录可以封装到上面一层（user文件）
+        self.show(bart_step)
+        dict_login = {
+            "username": "byhy",
+            "password": "88888888"
+        }
+        b_ret, reponses = self.user.login(dict_login)
+        if not b_ret:
+            raise print("login failed")
         bart_step="first"
         self.show(bart_step)
         dict_login = {

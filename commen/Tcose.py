@@ -1,4 +1,4 @@
-import unittest,os,time
+import unittest,os,time,toml
 
 class TextCase(unittest.TestCase):
     Time = time.strftime("%Y%m%d_%H%M%S", time.localtime())
@@ -15,10 +15,25 @@ class TextCase(unittest.TestCase):
         :return:
         """
         rout=""
+        rout_c=".."
+        file=os.path.abspath(os.path.join(os.getcwd()))
+        while True:
+            if file[-4:]!="case":
+                if file[-8:]=="tc_repot":
+                    file = os.path.abspath(os.path.join(os.getcwd(), rout_c))
+                    break
+                file=os.path.abspath(os.path.join(os.getcwd(),rout_c))
+                rout_c=rout_c+"/.."
+            elif file[-4:]=="case":
+                file = os.path.abspath(os.path.join(os.getcwd(), rout_c))
+                break
+
+        file=file+"\\conf\\url_conf.toml"#配置文件地址
+        project = toml.load(file)
         a=0
-        b=a-6
+        b=a-len(project["route"])
         for i in range(len(rou)):
-            if rou[b:a]=="my_api":
+            if rou[b:a]==project["route"]:
                 rout=rou[:a]
                 break
             a=a-1
