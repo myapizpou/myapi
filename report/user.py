@@ -7,23 +7,18 @@ class Api():
     """
     def __init__(self):
         self.Requests=Request()
-        #登录所用的账号，如果要换账号保持登录态，请在方法内更新这个账号密码
-        self.dict_rester={
-            "username": "byhy",
-            "password": "88888888"
-        }
 
-    def Get(self,api,dict_requet={},dict_rester={}):
-        return self.Requests.Get(api,dict_requet,dict_rester)
+    def Get(self,api,dict_requet={}):
+        return self.Requests.Get(api,dict_requet)
 
-    def Post(self,api,dict_requet={},dict_rester={}):
-        return self.Requests.Post(api,dict_requet,dict_rester)
+    def Post(self,api,dict_requet={}):
+        return self.Requests.Post(api,dict_requet)
 
-    def Put(self,api,dict_requet={},dict_rester={}):
-        return self.Requests.Put(api,dict_requet,dict_rester)
+    def Put(self,api,dict_requet={}):
+        return self.Requests.Put(api,dict_requet)
 
-    def Delete(self,api,dict_requet={},dict_rester={}):
-        return self.Requests.Delete(api,dict_requet,dict_rester)
+    def Delete(self,api,dict_requet={}):
+        return self.Requests.Delete(api,dict_requet)
 
     def weather(self,dict_ruster={}):
         """
@@ -34,7 +29,7 @@ class Api():
             "keywords":"",
         }
         dict.update(dict_ruster)
-        reponses=self.Get(Tim_api_get_apone,dict,self.dict_rester)
+        reponses=self.Get(Tim_api_get_apone,dict)
         if reponses["ret"]==0:
             b_ret=True
         else:
@@ -50,8 +45,8 @@ class Api():
             "username": "byhy",
             "password": "88888888"
         }
-        dict.update(dict_ruster)
-        reponses = self.Post(Tim_api_login_byhy,dict,self.dict_rester)
+        dict.update(dict_ruster)#将传进来的参数更新到dict,已有的参数会更新，没有则新增
+        reponses = self.Post(Tim_api_login_byhy,dict)#第一个参数是接口模板，第二个是你要传输的接口参数信息。第三个是一个预留的传参位
         if reponses["ret"] == 0:
             b_ret = True
         else:
@@ -64,7 +59,7 @@ class Api():
         :param dict_ruster:
         :return:
         """
-        reponses = self.Post(Tim_api_create_User,dict_ruster,self.dict_rester)
+        reponses = self.Post(Tim_api_create_User,dict_ruster)
         if reponses["ret"] == 0:
             b_ret = True
         else:

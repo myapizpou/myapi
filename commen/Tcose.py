@@ -1,4 +1,6 @@
 import unittest,os,time,toml
+from loguru import logger
+from Public_variable.variable import *
 
 class TextCase(unittest.TestCase):
     Time = time.strftime("%Y%m%d_%H%M%S", time.localtime())
@@ -46,13 +48,47 @@ class TextCase(unittest.TestCase):
         :return:
         """
         try:
-            print(Prin)
-            fw=open(globals()["touch"],"a")
-            fw.write(Prin+"\n")
-            fw.close()
+            logger.info(Prin)
         except FileNotFoundError:
             print("No such file or directory")
 
+    def ErrorLog(self,Prin):
+        """
+        打印错误执行日志
+        :return:
+        """
+        try:
+            logger.error(Prin)
+        except FileNotFoundError:
+            print("No such file or directory")
+
+    def case_user(self,name):
+        """
+        统计出所有用例编写人和编写数量
+        :param name:
+        :return:
+        """
+        if len(case_user)>0:
+            flag = True
+            su=0
+            for i in range(len(case_user)):
+                #判断是否已有用例编写人，已有则增加用例数，无则初始化
+                if case_user[i]["name"]==name:
+                    #发现相同，跳出循环
+                    flag=False
+                    su=i
+                    break
+                elif case_user[i]["name"]!=name:
+                    flag = True
+            if flag==True:
+                #初始化一个用例编写人信息
+                case_user.append({"name": name, "count": 1})
+            elif flag==False:
+                #增加一条用例统计
+                case_user[su]["count"]=case_user[su]["count"]+1
+                case_user[su].update({"count":case_user[su]["count"]})
+        elif len(case_user)==0:
+            case_user.append({"name":name,"count":1})
 
     def name(self,name):
         """
@@ -60,14 +96,15 @@ class TextCase(unittest.TestCase):
         :param name:
         :return:
         """
+        #统计所有用例编写人，并统计用例数
+        self.case_user(name)
         if globals()["a"]==1:
             rout = self.Route(os.path.abspath(os.curdir))
             file_json =f"\\report{self.Time}.log"
-            dict_l="Use case writer:"+name+"\n"
-            globals()["touch"]=rout + "\\Jsonproject"+ file_json
-            self.f = open(globals()["touch"], 'a')
-            self.f.write(dict_l)
-            self.f.close()
+            globals()["touch"] = rout + "\\Jsonproject" + file_json
+            logger.add(globals()["touch"])
+            dict_l="Use case writer:"+name
+            logger.info(dict_l)
         globals()["a"]=globals()["a"]+1
 
 
@@ -77,9 +114,9 @@ class TextCase(unittest.TestCase):
         :param string:
         :return:
         """
-        self.Printlog("Perform steps "+str(globals()['step'])+": "+string)
+        logger.info("Perform steps "+str(globals()['step'])+": "+string)
         globals()["step"]+=1
 
     def tearDown(self):
-        self.Printlog('==============last============')
+        logger.info('==============last============')
 

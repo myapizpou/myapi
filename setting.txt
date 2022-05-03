@@ -2,6 +2,7 @@
 python3.7以上
 pip install toml
 pip install requests
+pip install loguru
 os
 time
 json

@@ -14,7 +14,7 @@ Tim_api_get_apone="""
     "url":"/api/mgr/customers",
     "type":"GET",
     "api_type":"http",
-    "request":["action","pagenum","pagesize","keywords","_"],
+    "request":{"action":"$action","pagenum":"$pagenum","pagesize":"$pagesize","keywords":"$keywords","_":"$_"},
     "reponses_type":"json",
     "Content-Type":"params",
 }
@@ -26,7 +26,7 @@ Tim_api_login_byhy="""
     "url":"/api/mgr/signin",
     "type":"Post",
     "api_type":"http",
-    "request":["username","password"],
+    "request":{"username":"$username","password":"$password"},
     "reponses_type":"json",
     "Content-Type":"data",
 }
@@ -38,20 +38,8 @@ Tim_api_create_User="""
     "url":"/api/mgr/customers",
     "type":"Post",
     "api_type":"http",
-    "request":["name","phonenumber","address"],
+    "request":{"action":"$action","data":$data},
     "reponses_type":"json",
-    "Content-Type":"json",
-}
-"""
-
-#退出登录
-Tim_api_exit_login="""
-{
-    "url":"/api/mgr/signout",
-    "type":"Post",
-    "api_type":"http",
-    "request":[],
-    "reponses_type":"",
     "Content-Type":"json",
 }
 """

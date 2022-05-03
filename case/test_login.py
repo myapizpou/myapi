@@ -6,6 +6,7 @@ class Login(TextCase):
     def setUp(self):
         self.name("zpou") #执行人
         self.user=Api() #实例化
+        self.step = 1  # 初始化步骤
 
     def test_run(self):
         bart_step="first login"#登录可以封装到上面一层（user文件）

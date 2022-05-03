@@ -482,6 +482,17 @@ a.popup_link:hover {
     #
 
     REPORT_TMPL = """
+<table>
+<tr id='header_row'>
+    <td>测试用例编写人</td>
+    <td>测试用例数</td>
+</tr>
+<tr id='header_row'>
+    <td>总数</td>
+    <td>%(count)s</td>
+</tr>
+</table>
+
 <p id='show_detail_line'>显示
 <a href='javascript:showCase(0)'>概要</a>
 <a href='javascript:showCase(1)'>失败</a>
