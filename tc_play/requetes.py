@@ -7,6 +7,7 @@ from commen.cons import gcf
 from Public_variable.clog import *
 from commen import *
 import commen
+from requests.cookies import RequestsCookieJar
 
 
 class Request(object):
@@ -19,8 +20,9 @@ class Request(object):
         self.gpath = GetPath()
         self.Clog = CLOGS()
         self.begin = requests.session()
+        self.cookie_z = None
 
-    def param(self, request_type, dict_request={}):
+    def team_requetes_param(self, request_type, dict_request={}):
         """
         返回请求所需参数
         """
@@ -45,12 +47,13 @@ class Request(object):
         finally:
             return parm, json, data
 
-    def apileft(self, api, dict_request={}):
+    def team_requetes_apileft(self, api, dict_request={}):
         """
         获取接口信息，并返回请求参数
         :return:
         """
         try:
+            flag = False
             tmpl = string.Template(api)
             context = tmpl.safe_substitute(dict_request)
             contex = eval(context)
@@ -71,21 +74,26 @@ class Request(object):
             else:
                 raise Exception("The request mode is incorrect!")
             # 获取请求参数
-            parm = self.param(contex[gcf.TMP_API_CONTENT_TYPE], contex)
+            parm = self.team_requetes_param(contex[gcf.TMP_API_CONTENT_TYPE], contex)
             self.Clog.info('requests parameter: '+str(parm[2]))
             # 判断输入请求头
             if contex[gcf.TMP_API_LOCATION_INTERFACE] == gcf.TMP_API_LOGIN:
                 headers = gcf.API_HEADER
+                flag = True
+                cookie = None
             else:
                 headers = None
+                flag = False
+                cookie = self.cookie_z
             self.Clog.info('headers: ' + str(headers))
+            self.Clog.info('cookie: ' + str(cookie))
         except Exception as e:
             self.Clog.error(f'{e.args[0]}')
             self.Clog.error(f'{traceback.format_exc()}')
         finally:
-            return parm[0], parm[1], parm[2], url, headers, request_method
+            return parm[0], parm[1], parm[2], url, headers, request_method, cookie, flag
 
-    def respones(self, tmp_api, dict_request,  respones):
+    def team_requetes_respones(self, tmp_api, dict_request,  respones):
         """
         处理返回参数，返回信息
         打印状态码
@@ -113,6 +121,23 @@ class Request(object):
             self.Clog.error(f'{traceback.format_exc()}')
         finally:
             return b_ret, respones
+
+    def team_requetes_cookie(self, cookie_param):
+        """
+        获取cookie
+        :return:
+        """
+        try:
+            cookies_values = requests.utils.dict_from_cookiejar(cookie_param.cookies)
+            self.Clog.info(f'cookies_values : {cookies_values}')
+            cookies_skey = cookies_values['sessionid']
+            cookies_jar = RequestsCookieJar()
+            cookies_jar.set("sessionid", cookies_skey)
+        except Exception as e:
+            self.Clog.error(f'{e.args[0]}')
+            self.Clog.error(f'{traceback.format_exc()}')
+        finally:
+            self.cookie_z = cookie_param.cookies
 
 
 

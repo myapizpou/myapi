@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="056a79a7-12c3-40b7-81ba-f8a3eae83c99" name="Default Changelist" comment="" />
+    <list default="true" id="056a79a7-12c3-40b7-81ba-f8a3eae83c99" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/commen/flow/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commen/mysql_api/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commen/syetem/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commen/syetem/mjson.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Public_variable/apitest.py" beforeDir="false" afterPath="$PROJECT_DIR$/Public_variable/apitest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/oss/cesgu.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/oss/ceshi2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confdb/api/user/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/confdb/api/user/client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tc_play/requetes.py" beforeDir="false" afterPath="$PROJECT_DIR$/tc_play/requetes.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,7 +62,7 @@
       <recent name="E:\my_api\case\oss" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.run_all_case">
+  <component name="RunManager" selected="Python tests.Unittests in test_login.py">
     <configuration name="cesgu" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="my_api" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -152,10 +163,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.run_all_case" />
         <item itemvalue="Python tests.Unittests in test_login.py" />
-        <item itemvalue="Python.ceshi2" />
         <item itemvalue="Python.cesgu" />
+        <item itemvalue="Python.run_all_case" />
+        <item itemvalue="Python.ceshi2" />
         <item itemvalue="Python.getpath" />
       </list>
     </recent_temporary>

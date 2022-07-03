@@ -9,11 +9,11 @@ class ApiClient(COSapitest):
     类名自定义，固定继承COSapitest
     """
 
-    def api_get_apone(self, request_dict={}):
+    def api_get_apone(self, request_dict={}, header_update={}):
         """
         获取客户界面接口封装
         Tim_api_login_byhy:api模板名
         request_dict：传入的请求参数
         :return:
         """
-        return self.post(Tim_api_mgr_customers, request_dict)
+        return self.post(Tim_api_mgr_customers, request_dict, header_update)
