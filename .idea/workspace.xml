@@ -5,44 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="056a79a7-12c3-40b7-81ba-f8a3eae83c99" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Public_variable/flowtest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Public_variable/getpath.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Public_variable/testcase.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/oss/cesgu.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/oss/ceshi2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commen/cons/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commen/cons/gcf.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confdb/api/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confdb/api/user/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confdb/api/user/client.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confdb/api/user/user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confdb/const/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confdb/const/user/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confdb/flow/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confdb/flow/user/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confdb/flow/user/client.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confdb/flow/user/user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confdb/testcase/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confdb/testcase/commen.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/confdb/testcase/user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tc_play/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/my_api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/my_api.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jsonproject/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Public_variable/apitest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module introduction.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Module introduction.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public_variable/variable.py" beforeDir="false" afterPath="$PROJECT_DIR$/commen/variable.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/oss/test_weather.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/oss/test_weather.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/test_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/test_login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commen/Tcose.py" beforeDir="false" afterPath="$PROJECT_DIR$/commen/Tcose.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/url_conf.toml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/url_conf.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confdb/Tim_Api.py" beforeDir="false" afterPath="$PROJECT_DIR$/confdb/const/user/Tim_Api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Public_variable/clog.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/user.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tc_case/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Public_variable/cosflow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tc_case/requetes.py" beforeDir="false" afterPath="$PROJECT_DIR$/tc_play/requetes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tc_repot/run_all_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/tc_repot/run_all_case.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +53,7 @@
       <recent name="E:\my_api\case\oss" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in test_login.py">
+  <component name="RunManager" selected="Python.run_all_case">
     <configuration name="cesgu" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="my_api" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -133,27 +96,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="clog" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="my_api" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Public_variable" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Public_variable/clog.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="getpath" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="my_api" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -167,6 +109,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Public_variable/getpath.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="run_all_case" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="my_api" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tc_repot" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tc_repot/run_all_case.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -191,11 +154,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.run_all_case" />
         <item itemvalue="Python tests.Unittests in test_login.py" />
         <item itemvalue="Python.ceshi2" />
         <item itemvalue="Python.cesgu" />
         <item itemvalue="Python.getpath" />
-        <item itemvalue="Python.clog" />
       </list>
     </recent_temporary>
   </component>
