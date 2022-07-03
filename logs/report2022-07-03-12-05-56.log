@@ -1,0 +1,59 @@
+[INFO]2022-07-03 12:05:56,477: #################################################################
+[INFO]2022-07-03 12:05:56,478: Perform log
+[INFO]2022-07-03 12:05:56,478: #################################################################
+[INFO]2022-07-03 12:05:56,479: name:56:Use case writer:zpou
+[INFO]2022-07-03 12:05:56,480: Enter function : flow_weather()
+[INFO]2022-07-03 12:05:56,481: Input parameter : update_dict, value : value is empty.
+[INFO]2022-07-03 12:05:56,482: Enter function : flow_login()
+[INFO]2022-07-03 12:05:56,482: Input parameter : update_dict, value : value is empty.
+[ERROR]2022-07-03 12:05:56,484: apileft:83:name 'common' is not defined
+[ERROR]2022-07-03 12:05:56,485: apileft:84:Traceback (most recent call last):
+  File "D:\my_api\tc_play\requetes.py", line 56, in apileft
+    contex = eval(context)
+  File "<string>", line 15, in <module>
+NameError: name 'common' is not defined
+
+[ERROR]2022-07-03 12:05:56,487: post:61:local variable 'parm' referenced before assignment
+[ERROR]2022-07-03 12:05:56,488: post:62:Traceback (most recent call last):
+  File "D:\my_api\Public_variable\apitest.py", line 50, in post
+    param = self.Requests.apileft(api, dict_request)
+  File "D:\my_api\tc_play\requetes.py", line 86, in apileft
+    return parm[0], parm[1], parm[2], url, headers, request_method
+UnboundLocalError: local variable 'parm' referenced before assignment
+
+[ERROR]2022-07-03 12:05:56,490: flow_login:31:local variable 'b_ret' referenced before assignment
+[ERROR]2022-07-03 12:05:56,491: flow_login:32:Traceback (most recent call last):
+  File "D:\my_api\confdb\flow\user\user.py", line 26, in flow_login
+    b_ret, login_result = self.api_login_byhy(login_dict)
+  File "D:\my_api\confdb\api\user\user.py", line 19, in api_login_byhy
+    return self.post(Tim_api_mgr_signin, request_dict)
+  File "D:\my_api\Public_variable\apitest.py", line 64, in post
+    return b_ret, respones_reslut
+UnboundLocalError: local variable 'b_ret' referenced before assignment
+
+[INFO]2022-07-03 12:05:56,493: flow_weather:29:TypeError: update_dict is not dict!
+[ERROR]2022-07-03 12:05:56,494: apileft:83:name 'common' is not defined
+[ERROR]2022-07-03 12:05:56,495: apileft:84:Traceback (most recent call last):
+  File "D:\my_api\tc_play\requetes.py", line 56, in apileft
+    contex = eval(context)
+  File "<string>", line 19, in <module>
+NameError: name 'common' is not defined
+
+[ERROR]2022-07-03 12:05:56,496: post:61:local variable 'parm' referenced before assignment
+[ERROR]2022-07-03 12:05:56,498: post:62:Traceback (most recent call last):
+  File "D:\my_api\Public_variable\apitest.py", line 50, in post
+    param = self.Requests.apileft(api, dict_request)
+  File "D:\my_api\tc_play\requetes.py", line 86, in apileft
+    return parm[0], parm[1], parm[2], url, headers, request_method
+UnboundLocalError: local variable 'parm' referenced before assignment
+
+[ERROR]2022-07-03 12:05:56,499: flow_weather:37:local variable 'b_ret' referenced before assignment
+[ERROR]2022-07-03 12:05:56,501: flow_weather:38:Traceback (most recent call last):
+  File "D:\my_api\confdb\flow\user\client.py", line 30, in flow_weather
+    b_ret, weather_result = self.api_get_apone(weather_dict)
+  File "D:\my_api\confdb\api\user\client.py", line 19, in api_get_apone
+    return self.post(Tim_api_mgr_customers, request_dict)
+  File "D:\my_api\Public_variable\apitest.py", line 64, in post
+    return b_ret, respones_reslut
+UnboundLocalError: local variable 'b_ret' referenced before assignment
+

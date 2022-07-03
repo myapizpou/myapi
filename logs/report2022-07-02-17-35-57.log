@@ -1,0 +1,20 @@
+[INFO]2022-07-02 17:35:57,666: #################################################################
+[INFO]2022-07-02 17:35:57,666: Perform log
+[INFO]2022-07-02 17:35:57,666: #################################################################
+[INFO]2022-07-02 17:35:57,667: name:56:Use case writer:zpou
+[INFO]2022-07-02 17:35:57,668: apileft:56:interface message: {'url': '/api/mgr/signin', 'type': 'post', 'api_type': 'http', 'request': {'username': 'byhy', 'password': '88888888'}, 'reponses_type': 'json', 'Content-Type': 'data'}
+[INFO]2022-07-02 17:35:57,669: apileft:60:requests url: http://127.0.0.1:80/api/mgr/signin
+[INFO]2022-07-02 17:35:57,670: apileft:62:requests parameter: {'username': 'byhy', 'password': '88888888'}
+[DEBUG]2022-07-02 17:35:57,673: Starting new HTTP connection (1): 127.0.0.1:80
+[DEBUG]2022-07-02 17:35:58,119: http://127.0.0.1:80 "POST /api/mgr/signin HTTP/1.1" 200 10
+[INFO]2022-07-02 17:35:58,120: repons:77:In response to the results: {'ret': 0}
+[INFO]2022-07-02 17:35:58,121: apileft:56:interface message: {'url': '/api/mgr/customers', 'type': 'post', 'api_type': 'http', 'request': {'action': 'add_customer', 'data': {'name': 'ds', 'phonenumber': '17674573105', 'address': 'dasasdasd'}}, 'reponses_type': 'json', 'Content-Type': 'data'}
+[INFO]2022-07-02 17:35:58,123: apileft:60:requests url: http://127.0.0.1:80/api/mgr/customers
+[INFO]2022-07-02 17:35:58,124: apileft:62:requests parameter: {'action': 'add_customer', 'data': {'name': 'ds', 'phonenumber': '17674573105', 'address': 'dasasdasd'}}
+[DEBUG]2022-07-02 17:35:58,126: http://127.0.0.1:80 "POST /api/mgr/customers HTTP/1.1" 302 71
+[INFO]2022-07-02 17:35:58,127: repons:77:In response to the results: {'ret': 302, 'msg': '未登录', 'redirect': '/mgr/sign.html'}
+[INFO]2022-07-02 17:35:58,128: apileft:56:interface message: {'url': '/api/mgr/signout', 'type': 'post', 'api_type': 'http', 'request': {}, 'reponses_type': 'json', 'Content-Type': 'data'}
+[INFO]2022-07-02 17:35:58,130: apileft:60:requests url: http://127.0.0.1:80/api/mgr/signout
+[INFO]2022-07-02 17:35:58,130: apileft:62:requests parameter: {}
+[DEBUG]2022-07-02 17:35:58,133: http://127.0.0.1:80 "POST /api/mgr/signout HTTP/1.1" 200 10
+[INFO]2022-07-02 17:35:58,133: repons:77:In response to the results: {'ret': 0}

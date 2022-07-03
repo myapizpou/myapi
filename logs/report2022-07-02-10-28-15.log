@@ -1,0 +1,39 @@
+[INFO]2022-07-02 10:28:15,949: #################################################################
+[INFO]2022-07-02 10:28:15,950: Perform log
+[INFO]2022-07-02 10:28:15,950: #################################################################
+[ERROR]2022-07-02 10:28:15,950: log path:D:\my_api\logs\report2022-07-02-10-28-15.log
+[ERROR]2022-07-02 10:28:15,951: name:56:Use case writer:zpou
+[ERROR]2022-07-02 10:28:15,952: log path:D:\my_api\logs\report2022-07-02-10-28-15.log
+[ERROR]2022-07-02 10:28:15,952: apileft:51:interface message: {'url': '/api/mgr/signin', 'type': 'post', 'api_type': 'http', 'request': {'username': 'byhy', 'password': '88888888'}, 'reponses_type': 'json', 'Content-Type': 'data'}
+[ERROR]2022-07-02 10:28:15,955: log path:D:\my_api\logs\report2022-07-02-10-28-15.log
+[ERROR]2022-07-02 10:28:15,955: apileft:55:requests url: http://127.0.0.1:80/api/mgr/signin
+[ERROR]2022-07-02 10:28:15,956: log path:D:\my_api\logs\report2022-07-02-10-28-15.log
+[ERROR]2022-07-02 10:28:15,956: apileft:57:requests parameter: {'username': 'byhy', 'password': '88888888'}
+[DEBUG]2022-07-02 10:28:15,977: Starting new HTTP connection (1): 127.0.0.1:80
+[DEBUG]2022-07-02 10:28:17,148: http://127.0.0.1:80 "POST /api/mgr/signin HTTP/1.1" 200 10
+[ERROR]2022-07-02 10:28:17,149: log path:D:\my_api\logs\report2022-07-02-10-28-15.log
+[ERROR]2022-07-02 10:28:17,149: repons:72:In response to the results: {'ret': 0}
+[ERROR]2022-07-02 10:28:17,150: log path:D:\my_api\logs\report2022-07-02-10-28-15.log
+[ERROR]2022-07-02 10:28:17,150: apileft:51:interface message: {'url': '/api/mgr/customers', 'type': 'post', 'api_type': 'http', 'request': {'action': 'add_customer', 'data': {'name': 'ds', 'phonenumber': '17674573105', 'address': 'dasasdasd'}}, 'reponses_type': 'json', 'Content-Type': 'params'}
+[ERROR]2022-07-02 10:28:17,152: log path:D:\my_api\logs\report2022-07-02-10-28-15.log
+[ERROR]2022-07-02 10:28:17,152: apileft:55:requests url: http://127.0.0.1:80/api/mgr/customers
+[ERROR]2022-07-02 10:28:17,153: log path:D:\my_api\logs\report2022-07-02-10-28-15.log
+[ERROR]2022-07-02 10:28:17,154: apileft:59:can only concatenate str (not "dict") to str
+[ERROR]2022-07-02 10:28:17,155: log path:D:\my_api\logs\report2022-07-02-10-28-15.log
+[ERROR]2022-07-02 10:28:17,156: apileft:60:Traceback (most recent call last):
+  File "D:\my_api\tc_play\requetes.py", line 56, in apileft
+    parm = self.parm(contex["Content-Type"], contex)
+  File "D:\my_api\tc_play\requetes.py", line 31, in parm
+    parm = parm+key + "=" + value + "&"
+TypeError: can only concatenate str (not "dict") to str
+
+[ERROR]2022-07-02 10:28:17,157: log path:D:\my_api\logs\report2022-07-02-10-28-15.log
+[ERROR]2022-07-02 10:28:17,157: post:126:local variable 'parm' referenced before assignment
+[ERROR]2022-07-02 10:28:17,159: log path:D:\my_api\logs\report2022-07-02-10-28-15.log
+[ERROR]2022-07-02 10:28:17,159: post:127:Traceback (most recent call last):
+  File "D:\my_api\tc_play\requetes.py", line 112, in post
+    parm = self.apileft(api, dict_request)
+  File "D:\my_api\tc_play\requetes.py", line 62, in apileft
+    return parm[0], parm[1], parm[2], url
+UnboundLocalError: local variable 'parm' referenced before assignment
+

@@ -1,10 +1,8 @@
-import os,unittest
-import time
+import unittest
 import os
-from datetime import datetime
 from commen import HTMLTestRunner
 from datetime import *
-from Public_variable.variable import *
+
 
 def all_case():
     """

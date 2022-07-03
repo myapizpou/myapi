@@ -1,0 +1,38 @@
+[INFO]2022-07-03 12:25:21,530: #################################################################
+[INFO]2022-07-03 12:25:21,530: Perform log
+[INFO]2022-07-03 12:25:21,530: #################################################################
+[INFO]2022-07-03 12:25:21,531: name:56:Use case writer:zpou
+[INFO]2022-07-03 12:25:21,533: Enter function : flow_weather()
+[INFO]2022-07-03 12:25:21,533: Input parameter : update_dict, value : value is empty.
+[INFO]2022-07-03 12:25:21,534: Enter function : flow_login()
+[INFO]2022-07-03 12:25:21,534: Input parameter : update_dict, value : value is empty.
+[INFO]2022-07-03 12:25:21,536: apileft:57:interface message: {'url': '/api/mgr/signin', 'type': 'post', 'api_type': 'http', 'location_interface': 'my_api_login', 'request': {'username': 'byhy', 'password': '88888888'}, 'reponses_type': 'json', 'Content-Type': 'data', 'cyclical_pattern': {'flag': False, 'judgement_condition': {'right_or_wrong': {'ret': 0}}}}
+[INFO]2022-07-03 12:25:21,538: apileft:66:requests url: http://127.0.0.1:80/api/mgr/signin
+[INFO]2022-07-03 12:25:21,539: apileft:70:request method: post
+[INFO]2022-07-03 12:25:21,540: apileft:75:requests parameter: {'username': 'byhy', 'password': '88888888'}
+[INFO]2022-07-03 12:25:21,541: apileft:81:headers: {'content-type': 'application/x-www-form-urlencoded; charset=UTF-8', 'x-requested-with': 'XMLHttpRequest', 'sec-ch-ua-platform': 'Windows', 'Sec-Fetch-Site': 'same-origin', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Cookie': 'csrftoken = ftE3dWoJqtQx963qTSGEtPPD62a3dntwBQWBacLeot1E1ntBWX7DE75O6EhU53kg'}
+[DEBUG]2022-07-03 12:25:21,545: Starting new HTTP connection (1): 127.0.0.1:80
+[DEBUG]2022-07-03 12:25:22,086: http://127.0.0.1:80 "POST /api/mgr/signin HTTP/1.1" 200 10
+[INFO]2022-07-03 12:25:22,088: respones:95:b_ret value: True
+[INFO]2022-07-03 12:25:22,089: respones:107:In response to the results: {'ret': 0}
+[INFO]2022-07-03 12:25:22,090: respones:108:b_ret value: True
+[INFO]2022-07-03 12:25:22,091: flow_weather:29:TypeError: update_dict is not dict!
+[INFO]2022-07-03 12:25:22,093: apileft:57:interface message: {'url': '/api/mgr/customers', 'type': 'post', 'location_interface': 'my_api', 'api_type': 'http', 'request': {'action': 'add_customer', 'data': {'name': 'ds', 'phonenumber': '17674573105', 'address': 'dasasdasd'}}, 'reponses_type': 'json', 'Content-Type': 'json', 'cyclical_pattern': {'flag': False, 'judgement_condition': {'right_or_wrong': {'ret': 0}}}}
+[INFO]2022-07-03 12:25:22,095: apileft:66:requests url: http://127.0.0.1:80/api/mgr/customers
+[INFO]2022-07-03 12:25:22,096: apileft:70:request method: post
+[INFO]2022-07-03 12:25:22,097: apileft:75:requests parameter: {}
+[INFO]2022-07-03 12:25:22,098: apileft:81:headers: None
+[DEBUG]2022-07-03 12:25:22,167: http://127.0.0.1:80 "POST /api/mgr/customers HTTP/1.1" 200 21
+[INFO]2022-07-03 12:25:22,169: respones:95:b_ret value: True
+[INFO]2022-07-03 12:25:22,170: respones:107:In response to the results: {'ret': 0, 'id': 128}
+[INFO]2022-07-03 12:25:22,172: respones:108:b_ret value: True
+[INFO]2022-07-03 12:25:22,173: apileft:57:interface message: {'url': '/api/mgr/signout', 'type': 'post', 'location_interface': 'my_api_logout', 'api_type': 'http', 'request': {}, 'reponses_type': 'json', 'Content-Type': 'data', 'cyclical_pattern': {'flag': False, 'judgement_condition': {'right_or_wrong': {'ret': 0}}}}
+[INFO]2022-07-03 12:25:22,175: apileft:66:requests url: http://127.0.0.1:80/api/mgr/signout
+[INFO]2022-07-03 12:25:22,176: apileft:70:request method: post
+[INFO]2022-07-03 12:25:22,177: apileft:75:requests parameter: {}
+[INFO]2022-07-03 12:25:22,178: apileft:81:headers: None
+[DEBUG]2022-07-03 12:25:22,286: http://127.0.0.1:80 "POST /api/mgr/signout HTTP/1.1" 200 10
+[INFO]2022-07-03 12:25:22,288: respones:95:b_ret value: True
+[INFO]2022-07-03 12:25:22,289: respones:107:In response to the results: {'ret': 0}
+[INFO]2022-07-03 12:25:22,290: respones:108:b_ret value: True
+[INFO]2022-07-03 12:25:22,292: base_assert:17:b_ret value: True,create user

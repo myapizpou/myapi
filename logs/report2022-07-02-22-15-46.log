@@ -1,0 +1,23 @@
+[INFO]2022-07-02 22:15:46,078: #################################################################
+[INFO]2022-07-02 22:15:46,078: Perform log
+[INFO]2022-07-02 22:15:46,079: #################################################################
+[INFO]2022-07-02 22:15:46,079: name:56:Use case writer:zpou
+[INFO]2022-07-02 22:15:46,081: apileft:56:interface message: {'url': '/api/mgr/signin', 'type': 'post', 'api_type': 'http', 'location_interface': 'my_api_login', 'request': {'username': 'byhy', 'password': '88888888'}, 'reponses_type': 'json', 'Content-Type': 'data'}
+[INFO]2022-07-02 22:15:46,083: apileft:61:requests url: http://127.0.0.1:80/api/mgr/signin
+[INFO]2022-07-02 22:15:46,084: apileft:64:requests parameter: {'username': 'byhy', 'password': '88888888'}
+[INFO]2022-07-02 22:15:46,084: apileft:78:headers: {'content-type': 'application/x-www-form-urlencoded; charset=UTF-8', 'x-requested-with': 'XMLHttpRequest', 'sec-ch-ua-platform': 'Windows', 'Sec-Fetch-Site': 'same-origin', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Cookie': 'csrftoken = ftE3dWoJqtQx963qTSGEtPPD62a3dntwBQWBacLeot1E1ntBWX7DE75O6EhU53kg'}
+[DEBUG]2022-07-02 22:15:46,088: Starting new HTTP connection (1): 127.0.0.1:80
+[DEBUG]2022-07-02 22:15:46,657: http://127.0.0.1:80 "POST /api/mgr/signin HTTP/1.1" 200 10
+[INFO]2022-07-02 22:15:46,658: respones:93:In response to the results: {'ret': 0}
+[INFO]2022-07-02 22:15:46,659: apileft:56:interface message: {'url': '/api/mgr/customers', 'type': 'post', 'location_interface': 'my_api', 'api_type': 'http', 'request': {'action': 'add_customer', 'data': {'name': 'ds', 'phonenumber': '17674573105', 'address': 'dasasdasd'}}, 'reponses_type': 'json', 'Content-Type': 'json'}
+[INFO]2022-07-02 22:15:46,661: apileft:61:requests url: http://127.0.0.1:80/api/mgr/customers
+[INFO]2022-07-02 22:15:46,662: apileft:64:requests parameter: {}
+[INFO]2022-07-02 22:15:46,663: apileft:78:headers: None
+[DEBUG]2022-07-02 22:15:46,742: http://127.0.0.1:80 "POST /api/mgr/customers HTTP/1.1" 200 21
+[INFO]2022-07-02 22:15:46,743: respones:93:In response to the results: {'ret': 0, 'id': 118}
+[INFO]2022-07-02 22:15:46,744: apileft:56:interface message: {'url': '/api/mgr/signout', 'type': 'post', 'location_interface': 'my_api_logout', 'api_type': 'http', 'request': {}, 'reponses_type': 'json', 'Content-Type': 'data'}
+[INFO]2022-07-02 22:15:46,746: apileft:61:requests url: http://127.0.0.1:80/api/mgr/signout
+[INFO]2022-07-02 22:15:46,747: apileft:64:requests parameter: {}
+[INFO]2022-07-02 22:15:46,748: apileft:78:headers: None
+[DEBUG]2022-07-02 22:15:46,842: http://127.0.0.1:80 "POST /api/mgr/signout HTTP/1.1" 200 10
+[INFO]2022-07-02 22:15:46,843: respones:93:In response to the results: {'ret': 0}

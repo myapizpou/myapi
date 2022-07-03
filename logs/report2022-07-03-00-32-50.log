@@ -1,0 +1,34 @@
+[INFO]2022-07-03 00:32:50,428: #################################################################
+[INFO]2022-07-03 00:32:50,429: Perform log
+[INFO]2022-07-03 00:32:50,429: #################################################################
+[INFO]2022-07-03 00:32:50,430: name:56:Use case writer:zpou
+[ERROR]2022-07-03 00:32:50,431: apileft:81:name 'commen' is not defined
+[ERROR]2022-07-03 00:32:50,432: apileft:82:Traceback (most recent call last):
+  File "D:\my_api\tc_play\requetes.py", line 54, in apileft
+    contex = eval(context)
+  File "<string>", line 2, in <module>
+NameError: name 'commen' is not defined
+
+[ERROR]2022-07-03 00:32:50,434: post:60:local variable 'parm' referenced before assignment
+[ERROR]2022-07-03 00:32:50,435: post:61:Traceback (most recent call last):
+  File "D:\my_api\Public_variable\apitest.py", line 49, in post
+    param = self.Requests.apileft(api, dict_request)
+  File "D:\my_api\tc_play\requetes.py", line 84, in apileft
+    return parm[0], parm[1], parm[2], url, headers, request_method
+UnboundLocalError: local variable 'parm' referenced before assignment
+
+[ERROR]2022-07-03 00:32:50,436: apileft:81:name 'commen' is not defined
+[ERROR]2022-07-03 00:32:50,437: apileft:82:Traceback (most recent call last):
+  File "D:\my_api\tc_play\requetes.py", line 54, in apileft
+    contex = eval(context)
+  File "<string>", line 2, in <module>
+NameError: name 'commen' is not defined
+
+[ERROR]2022-07-03 00:32:50,438: post:60:local variable 'parm' referenced before assignment
+[ERROR]2022-07-03 00:32:50,439: post:61:Traceback (most recent call last):
+  File "D:\my_api\Public_variable\apitest.py", line 49, in post
+    param = self.Requests.apileft(api, dict_request)
+  File "D:\my_api\tc_play\requetes.py", line 84, in apileft
+    return parm[0], parm[1], parm[2], url, headers, request_method
+UnboundLocalError: local variable 'parm' referenced before assignment
+
