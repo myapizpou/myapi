@@ -18,13 +18,15 @@ class TextClient(Integrate):
         :return:
         """
         b_ret = False
+        weather_result = {}
         try:
+            self.base_step("创建客户")
             b_ret, weather_result = self.flow_weather()
-            self.base_assert("create user", b_ret)
         except Exception as e:
             b_ret = False
             self.Clog.error(f'{e.args[0]}')
             self.Clog.error(f'{traceback.format_exc()}')
         finally:
+            self.base_assert("create user", b_ret)
             return weather_result
 

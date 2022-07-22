@@ -1,5 +1,5 @@
 from Public_variable.clog import *
-from commen import variable
+from commenlib import variable
 
 
 class TextCase(object):

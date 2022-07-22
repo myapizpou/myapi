@@ -11,20 +11,20 @@
 
 # 登录接口
 Tim_api_mgr_signin = """{
-    commen.cons.gcf.TMP_API_URL: "/api/mgr/signin",
-    commen.cons.gcf.TMP_API_REQUEST_TRPE: "post",
-    commen.cons.gcf.TMP_API_TRPE: commen.cons.gcf.TMP_API_TRPE_HTTP,
-    commen.cons.gcf.TMP_API_LOCATION_INTERFACE: commen.cons.gcf.TMP_API_LOGIN,
-    commen.cons.gcf.TMP_API_REQUEST:{
+    commenlib.const.gcf.TMP_API_URL: "/api/mgr/signin",
+    commenlib.const.gcf.TMP_API_REQUEST_TRPE: "post",
+    commenlib.const.gcf.TMP_API_TRPE: commenlib.const.gcf.TMP_API_TRPE_HTTP,
+    commenlib.const.gcf.TMP_API_LOCATION_INTERFACE: commenlib.const.gcf.TMP_API_LOGIN,
+    commenlib.const.gcf.TMP_API_REQUEST:{
         "username":"$username",
         "password":"$password"
          },
-    commen.cons.gcf.TMP_API_REPONSES_TYPE_KEY: commen.cons.gcf.TMP_API_REPONSES_TYPE_JSON,
-    commen.cons.gcf.TMP_API_CONTENT_TYPE: "data",
-    commen.cons.gcf.TMP_API_CYCLICAL_PATTERN: {
-        commen.cons.gcf.TMP_API_CYCLICAL_FALG: False,
-        commen.cons.gcf.TMP_API_JUDGEMENT_CONDITION:{
-            commen.cons.gcf.TMP_API_RIGHT_OR_WRONG:{
+    commenlib.const.gcf.TMP_API_REPONSES_TYPE_KEY: commenlib.const.gcf.TMP_API_REPONSES_TYPE_JSON,
+    commenlib.const.gcf.TMP_API_CONTENT_TYPE: "data",
+    commenlib.const.gcf.TMP_API_CYCLICAL_PATTERN: {
+        commenlib.const.gcf.TMP_API_CYCLICAL_FALG: False,
+        commenlib.const.gcf.TMP_API_JUDGEMENT_CONDITION:{
+            commenlib.const.gcf.TMP_API_RIGHT_OR_WRONG:{
                 "ret": 0
         }
     }
@@ -33,17 +33,17 @@ Tim_api_mgr_signin = """{
 
 # 登出接口
 Tim_api_mgr_signout = """{
-    commen.cons.gcf.TMP_API_URL: "/api/mgr/signout",
-    commen.cons.gcf.TMP_API_REQUEST_TRPE: "post",
-    commen.cons.gcf.TMP_API_LOCATION_INTERFACE: commen.cons.gcf.TMP_API_LOGOUT,
-    commen.cons.gcf.TMP_API_TRPE: commen.cons.gcf.TMP_API_TRPE_HTTP,
-    commen.cons.gcf.TMP_API_REQUEST: {},
-    commen.cons.gcf.TMP_API_REPONSES_TYPE_KEY: commen.cons.gcf.TMP_API_REPONSES_TYPE_JSON,
-    commen.cons.gcf.TMP_API_CONTENT_TYPE: "data",
-    commen.cons.gcf.TMP_API_CYCLICAL_PATTERN: {
-        commen.cons.gcf.TMP_API_CYCLICAL_FALG: False,
-        commen.cons.gcf.TMP_API_JUDGEMENT_CONDITION:{
-            commen.cons.gcf.TMP_API_RIGHT_OR_WRONG:{
+    commenlib.const.gcf.TMP_API_URL: "/api/mgr/signout",
+    commenlib.const.gcf.TMP_API_REQUEST_TRPE: "post",
+    commenlib.const.gcf.TMP_API_LOCATION_INTERFACE: commenlib.const.gcf.TMP_API_LOGOUT,
+    commenlib.const.gcf.TMP_API_TRPE: commenlib.const.gcf.TMP_API_TRPE_HTTP,
+    commenlib.const.gcf.TMP_API_REQUEST: {},
+    commenlib.const.gcf.TMP_API_REPONSES_TYPE_KEY: commenlib.const.gcf.TMP_API_REPONSES_TYPE_JSON,
+    commenlib.const.gcf.TMP_API_CONTENT_TYPE: "data",
+    commenlib.const.gcf.TMP_API_CYCLICAL_PATTERN: {
+        commenlib.const.gcf.TMP_API_CYCLICAL_FALG: False,
+        commenlib.const.gcf.TMP_API_JUDGEMENT_CONDITION:{
+            commenlib.const.gcf.TMP_API_RIGHT_OR_WRONG:{
                 "ret": 0
         }
     }
@@ -52,11 +52,11 @@ Tim_api_mgr_signout = """{
 
 # 创建客户
 Tim_api_mgr_customers = """{
-    commen.cons.gcf.TMP_API_URL: "/api/mgr/customers",
-    commen.cons.gcf.TMP_API_REQUEST_TRPE: "post",
-    commen.cons.gcf.TMP_API_LOCATION_INTERFACE: commen.cons.gcf.TMP_API_PARAM,
-    commen.cons.gcf.TMP_API_TRPE: commen.cons.gcf.TMP_API_TRPE_HTTP,
-    commen.cons.gcf.TMP_API_REQUEST: {
+    commenlib.const.gcf.TMP_API_URL: "/api/mgr/customers",
+    commenlib.const.gcf.TMP_API_REQUEST_TRPE: "post",
+    commenlib.const.gcf.TMP_API_LOCATION_INTERFACE: commenlib.const.gcf.TMP_API_PARAM,
+    commenlib.const.gcf.TMP_API_TRPE: commenlib.const.gcf.TMP_API_TRPE_HTTP,
+    commenlib.const.gcf.TMP_API_REQUEST: {
           "action": "$action",
           "data": {
             "name": "$name",
@@ -64,12 +64,12 @@ Tim_api_mgr_customers = """{
             "address": "$address"
           }
         },
-    commen.cons.gcf.TMP_API_REPONSES_TYPE_KEY: commen.cons.gcf.TMP_API_REPONSES_TYPE_JSON,
-    commen.cons.gcf.TMP_API_CONTENT_TYPE: "json",
-    commen.cons.gcf.TMP_API_CYCLICAL_PATTERN: {
-        commen.cons.gcf.TMP_API_CYCLICAL_FALG: False,
-        commen.cons.gcf.TMP_API_JUDGEMENT_CONDITION:{
-            commen.cons.gcf.TMP_API_RIGHT_OR_WRONG:{
+    commenlib.const.gcf.TMP_API_REPONSES_TYPE_KEY: commenlib.const.gcf.TMP_API_REPONSES_TYPE_JSON,
+    commenlib.const.gcf.TMP_API_CONTENT_TYPE: "json",
+    commenlib.const.gcf.TMP_API_CYCLICAL_PATTERN: {
+        commenlib.const.gcf.TMP_API_CYCLICAL_FALG: False,
+        commenlib.const.gcf.TMP_API_JUDGEMENT_CONDITION:{
+            commenlib.const.gcf.TMP_API_RIGHT_OR_WRONG:{
                 "ret": 0
         }
     }

@@ -1,12 +1,12 @@
 import traceback
 import requests
-from commen.Tcose import TextCase
+from commenlib.Tcose import TextCase
 import string
 from Public_variable.getpath import *
-from commen.cons import gcf
+from commenlib.const import gcf
 from Public_variable.clog import *
-from commen import *
-import commen
+from commenlib import *
+import commenlib
 from requests.cookies import RequestsCookieJar
 
 

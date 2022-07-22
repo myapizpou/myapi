@@ -2,8 +2,8 @@ from tc_play.requetes import Request
 import requests
 import traceback
 from Public_variable.clog import *
-from commen.cons import gcf
-import commen
+from commenlib.const import gcf
+import commenlib
 
 
 class COSapitest(object):

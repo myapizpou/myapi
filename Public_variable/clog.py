@@ -2,6 +2,8 @@ import logging
 import sys
 import traceback
 from Public_variable.getpath import *
+import coloredlogs
+from commenlib.const import gcf
 
 
 def for_get_file(file_name, i):
@@ -68,6 +70,7 @@ class Logger(object):
             # 创建一个logger
             self.logger = logging.getLogger()
             self.logger.setLevel(loglevel)
+            # logging.basicConfig(stream=sys.stdout)
             # 创建一个handler，用于写入日志文件
             fh = logging.FileHandler(logname, encoding="UTF-8")
             fh.setLevel(loglevel)
@@ -76,7 +79,8 @@ class Logger(object):
                 ch = logging.StreamHandler()
                 ch.setLevel(loglevel)
                 # 定义handler的输出格式
-                formatter = logging.Formatter(f'[%(levelname)s]%(asctime)s: %(message)s')
+                # formatter = logging.Formatter('[%(levelname)s]%(asctime)s: %(message)s', log_colors=log_colors_config)
+                formatter = logging.Formatter('[%(levelname)s]%(asctime)s: %(message)s')
                 fh.setFormatter(formatter)
                 ch.setFormatter(formatter)
                 # 给logger添加handler

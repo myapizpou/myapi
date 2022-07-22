@@ -1,16 +1,28 @@
 import time
 
+# 苹果路径分割符
+MAC_SPLIT = '/'
+# win路径分割符
+WIN_SPLIT = '\\'
+OLD_PATH = "../"
+# 项目文件
+TEMP_FILE = ['commenlib', 'case', 'case_report', 'conf', 'confdb', 'tc_play', 'tc_repot', 'logs', 'Public_variable']
 # logs的绝对路径
-GET_LOGS_PATH = "../logs"
+GET_LOGS_PATH = "logs"
 # conf地址
-GET_CONF_PATH = "../conf"
+GET_CONF_PATH = "conf"
+# const路径
+GET_CONST_PATH = "commenlib/const"
+# 步骤文件名
+STEP_FILE_NAME = '/file_param.txt'
 # 配置文件
 TOML_NAME = "/url_conf.toml"
 # 日志文件前缀
 REPORT_NAME_QIAN = 'report'
 # 日志文件名
 REPORT_NAME = f'\\{REPORT_NAME_QIAN}{time.strftime("%Y-%m-%d-%H-%M-%S", time.localtime())}.log'
-
+# 日志打印控制台颜色
+LOG_COLOR = {"INFO": "black", "ERROR": "red"}
 # 模板字段
 TMP_API_URL = 'url'
 # 接口请求类型，支持get、post、put、delete
@@ -60,3 +72,11 @@ API_HEADER = {
 }
 API_SYMBOL = '://'
 API_SYMBOL_M = ':'
+
+# mysql
+DATABASE_TYPE_MYSQL = 'mysql'
+DATABASE_TYPE_MYSQL_LIST = ["type", "library_name", "charset", "user", "password", "port", "ip", "database"]
+DATABASE_MYSQL_LIBRARY = 'mysql+pymysql'
+# postgresql
+DATABASE_TYPE_POSTGRESQL = 'postgresql'
+
