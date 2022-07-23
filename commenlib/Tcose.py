@@ -1,5 +1,6 @@
 from Public_variable.clog import *
 from commenlib import variable
+from commenlib.syetem.mfile import *
 
 
 class TextCase(object):
@@ -7,6 +8,7 @@ class TextCase(object):
     def __init__(self):
         self.gpath = GetPath()
         self.Clog = None
+        self.file = Mfile()
 
     def caseuser(self, name):
         """
@@ -54,6 +56,7 @@ class TextCase(object):
             # 新建日志文件
             self.Clog.add()
             self.Clog.info(dict_l)
+            self.file.start_end_time()
         except Exception as e:
             self.Clog.error(f'{e.args[0]}')
 
